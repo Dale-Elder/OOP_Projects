@@ -9,13 +9,11 @@ package com.mycompany.userinputapp;
  *
  * @author User
  */
-public class Student {
+public abstract class Student {
     
-    private String id;
-    private String name;
-    private String course;
-    private Double mark;
-    private Boolean passed;
+    protected String id, name, course;
+    protected Double mark;
+    protected Boolean passed;
     
     public Student (String nameIn, String courseIn)
     {
@@ -61,41 +59,19 @@ public class Student {
         }
     }
     
-    public void getGrade()
-    {
-        if(this.mark > 70)
-        {
-            System.out.println("First");
-        }
-        else if(this.mark >= 60 == this.mark <= 69)
-        {
-            System.out.println("2/1");
-        }
-        else if(this.mark >= 50 == this.mark <= 59)
-        {
-            System.out.println("2/2");
-        }
-        else if(this.mark >= 40 == this.mark <= 49)
-        {
-            System.out.println("Third");
-        }
-        else
-        {
-            System.out.println("Fail");
-        }
-    }
+    abstract public void getGrade();
     
-    public void didPass()
+    public Boolean didPass()
     {
         if(this.mark < 40)
         {
             passed = false;
-            System.out.println("Failed");
+            return false;
         }
         else
         {
             passed = true;
-            System.out.println("Passed");
+            return true;
         }
     }
 }

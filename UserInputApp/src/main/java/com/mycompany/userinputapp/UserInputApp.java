@@ -11,6 +11,23 @@ public class UserInputApp
 {
     public static void main(String[] args)
     {
+        // testing Undergraduate subclass from abstract student class
+        Undergraduate undergrad = new Undergraduate("John", "Software");
+        System.out.println("Name: " + undergrad.getName());
+        System.out.println("Course: " + undergrad.getCourse());
+        undergrad.setMark(89.0);
+        System.out.println("Passed: " + undergrad.didPass());
+        undergrad.getGrade();
+        
+        // testing Masters subclass from abstract student class
+        Masters master = new Masters("Dave", "Software Engineering");
+        System.out.println("Name: " + master.getName());
+        System.out.println("Course: " + master.getCourse());
+        master.setMark(90.0);
+        System.out.println("Passed: " + master.didPass());
+        master.getGrade();
+        
+        /* loop for taking students details in
         for( int i=1; i > 0; i--)
         {
             // starting the first scanner to take input
@@ -38,23 +55,16 @@ public class UserInputApp
             
             //creating a new student object with the input data
             Student student = new Student(studentName, studentCourse);
-               
+        */    
+        
+            /*
+            // outputting students data
             System.out.println ("Name: " + student.getName());
             System.out.println ("Course: " + student.getCourse());
             student.setMark(mark);
             System.out.println ("Mark: " + student.getMark());
             student.getGrade();
             student.didPass();
-            
-            /*
-            if(mark < 0 || mark > 100)
-            {
-                System.out.println("Error students mark must be between 0 - 100");
-            }
-            else
-            {
-                student.display();
-            }
             */
             
             /* testing getters
