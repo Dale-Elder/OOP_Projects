@@ -38,7 +38,15 @@ public class UserInputApp
             
             //creating a new student object with the input data
             Student student = new Student(studentName, studentCourse);
-                        
+               
+            System.out.println ("Name: " + student.getName());
+            System.out.println ("Course: " + student.getCourse());
+            student.setMark(mark);
+            System.out.println ("Mark: " + student.getMark());
+            student.getGrade();
+            student.didPass();
+            
+            /*
             if(mark < 0 || mark > 100)
             {
                 System.out.println("Error students mark must be between 0 - 100");
@@ -47,6 +55,7 @@ public class UserInputApp
             {
                 student.display();
             }
+            */
             
             /* testing getters
             System.out.println(student.getName());
@@ -58,10 +67,6 @@ public class UserInputApp
             student.setMark(99.0);
             System.out.println(student.getMark());
             */
-            
-            // testing getGrade
-            student.getGrade();
-            student.didPass();
         }
     }
 }
